@@ -1,0 +1,14 @@
+name: 'nigeria_jobs'
+version: '1.0.0'
+profile: 'nigeria_jobs'
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  nigeria_jobs:
+    transformed:
+      +materialized: table
+      +schema: transformed
+    analytics:
+      +materialized: table
+      +schema: analytics

@@ -2,3 +2,6 @@
 .env
 __pycache__/
 raw/*.json
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/dbt/.user.yml
