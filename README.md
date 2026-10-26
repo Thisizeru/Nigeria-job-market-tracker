@@ -2,7 +2,9 @@
 
 An end-to-end data pipeline that collects Nigerian data job listings, cleans them with dbt, and shows what the market looks like on a Streamlit dashboard.
 
-![Dashboard](docs/dashboard.png)
+![Dashboard overview](screenshots/dashboard_overview.png)
+
+![Dashboard overview 2](screenshots/dashboard_overview2.png)
 
 ## What it does
 1. **Extract:** pulls data job listings from the Jooble API and saves each response untouched.
