@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: jobs_clean
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+      - name: title
+        data_tests:
+          - not_null
+      - name: company
+        data_tests:
+          - not_null
