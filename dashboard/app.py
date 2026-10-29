@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -6,9 +7,11 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 
-load_dotenv()  
+load_dotenv()
 
 st.set_page_config(page_title="Nigeria Data Jobs Tracker", layout="wide")
+
+DATA_DIR = Path(__file__).parent / "data"
 
 
 @st.cache_resource
@@ -26,6 +29,9 @@ def get_engine():
 
 @st.cache_data(ttl=600)
 def load(table):
+    csv_path = DATA_DIR / f"{table}.csv"
+    if csv_path.exists():
+        return pd.read_csv(csv_path)
     return pd.read_sql(f"select * from analytics.{table}", get_engine())
 
 
