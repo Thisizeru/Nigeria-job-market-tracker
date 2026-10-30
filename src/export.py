@@ -22,6 +22,7 @@ def main():
             host=os.getenv("DB_HOST"),
             port=int(os.getenv("DB_PORT", "5432")),
             database=os.getenv("DB_NAME"),
+            query={"sslmode": os.getenv("DB_SSLMODE", "prefer")},
         )
     )
     for table in TABLES:

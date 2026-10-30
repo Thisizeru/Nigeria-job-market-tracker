@@ -16,10 +16,13 @@ engine = create_engine(
         password=os.getenv("DB_PASSWORD"),
         host=os.getenv("DB_HOST", "localhost"),
         port=int(os.getenv("DB_PORT", "5434")),
-        sslmode=os.getenv("DB_SSLMODE", "prefer"),
         database=os.getenv("DB_NAME", "nigeria_jobs"),
+        query={"sslmode": os.getenv("DB_SSLMODE", "prefer")},
     )
 )
+
+with engine.begin() as conn:
+    conn.execute(text("CREATE SCHEMA IF NOT EXISTS raw"))
 
 for file in sorted(Path("raw").glob("jooble_*.json")):
     data = json.loads(file.read_text(encoding="utf-8"))
