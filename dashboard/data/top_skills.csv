@@ -1,7 +1,6 @@
 skill,job_count,share_of_jobs_pct
-Python,2,2.2
-SQL,2,2.2
-AWS,1,1.1
-GCP,1,1.1
-Machine Learning,1,1.1
-Snowflake,1,1.1
+AWS,1,1.3
+Excel,1,1.3
+GCP,1,1.3
+Machine Learning,1,1.3
+Snowflake,1,1.3
