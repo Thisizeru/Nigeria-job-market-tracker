@@ -1,7 +1,7 @@
 import subprocess
 from dotenv import load_dotenv
 
-load_dotenv()  
+load_dotenv()
 
 print("beginning job tracker pipeline execution")
 
