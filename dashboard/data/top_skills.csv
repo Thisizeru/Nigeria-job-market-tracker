@@ -1,11 +1,11 @@
 skill,job_count,share_of_jobs_pct
-Machine Learning,3,2.5
-Excel,2,1.6
-AWS,2,1.6
-Power BI,1,0.8
-Python,1,0.8
+Machine Learning,4,3.1
+ETL,2,1.5
+Excel,2,1.5
+AWS,2,1.5
 SQL,1,0.8
 Snowflake,1,0.8
 Tableau,1,0.8
-ETL,1,0.8
 GCP,1,0.8
+Power BI,1,0.8
+Python,1,0.8
